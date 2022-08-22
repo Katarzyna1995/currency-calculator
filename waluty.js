@@ -1,4 +1,4 @@
-console.log("Witam serdecznie, wszystkich :). Dziękuje za skorzystanie z przelicznika walutowego :). Ten kod jest już w repozytorium Git.");
+console.log("Hello warmly, everyone :). Thank you for using the currency converter :). This code is already in the Git repository.");
 
 let formElement = document.querySelector(".form");
 let valueElement = document.querySelector(".form__field1");
