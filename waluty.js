@@ -1,3 +1,5 @@
+console.log("Witam serdecznie, wszystkich :). Dziękuje za skorzystanie z przelicznika walutowego :). Ten kod jest już w repozytorium Git.");
+
 let formElement = document.querySelector(".form");
 let valueElement = document.querySelector(".form__field1");
 let currency = document.querySelector(".form__field2");
