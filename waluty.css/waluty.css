@@ -16,39 +16,20 @@ body {
     display: inline-block;
     margin-right: 5px;
 }
-.form__field1 {
+.form__field {
     border: 1px solid #ccc;
     padding: 10px;
     width: 100%;
     max-width: 400px;
     border-radius: 5px;
 }
-.form__field2 {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 5px;
+.form__field--input_currency_rate {
+    border: none;
 }
-.form__field3 {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 5px;
+.form__field--output_currency_rate {
+    border: none;
 }
-.form__field4 {
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 5px;
-}
-.form__field5 {
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 5px;
-}
+
 .form__button {
     width: 100%;
     border: none;
