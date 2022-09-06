@@ -1,183 +1,210 @@
-console.log("Hello warmly, everyone :). Thank you for using the currency converter :). This code is already in the Git repository.");
+{
+ console.log("Hello warmly, everyone :). Thank you for using the currency converter :). This code is already in the Git repository.");
 
-let formElement = document.querySelector(".form");
-let valueElement = document.querySelector(".form__field1");
-let currency = document.querySelector(".form__field2");
-let currency1 = document.querySelector(".form__field3");
-let currency2 = document.querySelector(".form__field4");
-let currency3 = document.querySelector(".form__field5");
-let amountElement = document.querySelector(".amount");
-let amountElement1 = document.querySelector(".amount1");
-let amountElement2 = document.querySelector(".amount2");
-let amountElement3 = document.querySelector(".amount3");
+    function currency_calculator_first_stage(value, input_currencyElement) {
 
+        const valueElement = document.querySelector(".form__field--value");
+        value = valueElement.value
 
-formElement.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    let value = valueElement.value
-
-        switch (currency.value) {
+        switch (input_currencyElement.value) {
 
             case "PLN":
-                PLN = value*1;
-                currency2.innerText=1.000.toFixed(2)
-                break;
+                return PLN_amount = value * PLN;
 
             case "EUR":
-                PLN = value*4.7013;
-                currency2.innerText=4.7013;
-                break;
-                
+                return PLN_amount = value * EUR;
+
             case "GBP":
-                PLN = value*5.5752;
-                currency2.innerText=5.5752;
-                break;
+                return PLN_amount = value * GBP;
 
             case "USD":
-                PLN = value*4.6127;
-                currency2.innerText=4.6127;
-                break;
+                return PLN_amount = value * USD;
 
             case "CAD":
-                PLN = value*3.5734;
-                currency2.innerText=3.5734;
-                break;
+                return PLN_amount = value * CAD;
 
             case "CLP":
-                PLN = value*0.005;
-                currency2.innerText=0.005;
-                break;
+                return PLN_amount = value * CLP;
 
             case "AUD":
-                PLN = value*3.2101;
-                currency2.innerText=3.2101;
-                break;
+                return PLN_amount = value * AUD;
 
             case "CZK":
-                PLN = value*0.1916;
-                currency2.innerText=0.1916;
-                break;
-                
+                return PLN_amount = value * CZK;
+
             case "UAH":
-                PLN = value*0.1258;
-                currency2.innerText=0.1258;
-                break;
+                return PLN_amount = value * UAH;
 
             case "NZD":
-                PLN = value*2.8878;
-                currency2.innerText=2.8878;
-                break;
-            
-            default:
-                PLN = value*4.8137;
-                currency2.innerText=4.8137;
-        }
+                return PLN_amount = value * NZD;
 
-        switch (currency1.value) {
+            default:
+                return PLN_amount = value * CHF;
+        };
+    } 
+
+    function currency_calculator_second_stage(PLN_amount, output_currencyElement) {
+
+        const input_currencyElement = document.querySelector(".form__field--input_currency");
+        PLN_amount = currency_calculator_first_stage(value, input_currencyElement);
+
+        switch (output_currencyElement.value) {
 
             case "PLN":
-                kwota = PLN/1
-                currency3.innerText=1.000.toFixed(2)
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+                return amount = PLN_amount / PLN;
 
             case "EUR":
-                kwota = PLN/4.7013;
-                currency3.innerText=4.7013;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+                return amount = PLN_amount / EUR;
 
             case "GBP":
-                kwota = PLN/5.5752;
-                currency3.innerText=5.5752;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+                return amount = PLN_amount / GBP;
 
             case "USD":
-                kwota = PLN/4.6127;
-                currency3.innerText=4.6127;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+                return amount = PLN_amount / USD;
 
             case "CAD":
-                kwota = PLN/3.5734;
-                currency3.innerText=3.5734;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+                return amount = PLN_amount / CAD;
 
             case "CLP":
-                kwota = PLN/0.005;
-                currency3.innerText=0.005;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+                return amount = PLN_amount / CLP;
 
-            case "CLP":
-                kwota = PLN/3.2101;
-                currency3.innerText=3.2101;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+            case "AUD":
+                return amount = PLN_amount / AUD;
 
             case "CZK":
-                kwota = PLN/0.1916;
-                currency3.innerText=0.1916;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+                return amount = PLN_amount / CZK;
 
             case "UAH":
-                kwota = PLN/0.1258;
-                currency3.innerText=0.1258;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+                return amount = PLN_amount / UAH;
 
             case "NZD":
-                kwota = PLN/2.8878;
-                currency3.innerText=2.8878;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;
+                return amount = PLN_amount / NZD;
+
+            default:
+                return amount = PLN_amount / CHF;   
+        }
+    };
+
+    const formElement = document.querySelector(".form");
+    
+    formElement.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const input_currencyElement = document.querySelector(".form__field--input_currency");
+        const input_currency_rateElement = document.querySelector(".form__field--input_currency_rate");
+       
+        PLN = 1;
+        EUR = 4.7013;
+        GBP = 5.5752;
+        USD = 4.6127;
+        CAD = 3.5734;
+        CLP = 0.005;
+        AUD = 3.2101;
+        CZK = 0.1916;
+        UAH = 0.1258;
+        NZD = 2.8878;
+        CHF = 4.8137;
+
+        switch (input_currencyElement.value) {
+
+            case "PLN":
+                return input_currency_rateElement.innerText=PLN.toFixed(2);
+
+            case "EUR":
+                return input_currency_rateElement.innerText=EUR;
+
+            case "GBP":
+                return input_currency_rateElement.innerText=GBP;
+
+            case "USD":
+                return input_currency_rateElement.innerText=USD;
+
+            case "CAD":
+                return input_currency_rateElement.innerText=CAD;
+
+            case "CLP":
+                return input_currency_rateElement.innerText=CLP;
+
+            case "AUD":
+                return input_currency_rateElement.innerText=AUD;
+
+            case "CZK":
+                return input_currency_rateElement.innerText=CZK;
+                
+            case "UAH":
+                return input_currency_rateElement.innerText=UAH;
+
+            case "NZD":
+                return input_currency_rateElement.innerText=NZD;
             
             default:
-                kwota = PLN/4.8137;
-                currency3.innerText=4.8137;
-                amountElement.innerText = value;
-                amountElement1.innerText = currency.value;
-                amountElement2.innerText = kwota.toFixed(2);
-                amountElement3.innerText = currency1.value;
-                break;             
-        }
+                return input_currency_rateElement.innerText=CHF;
+        };       
+    });
+    formElement.addEventListener("submit", (e) => {
+        e.preventDefault(); 
 
-});
+        const output_currencyElement = document.querySelector(".form__field--output_currency");
+        const output_currency_rateElement = document.querySelector(".form__field--output_currency_rate");
+
+        switch (output_currencyElement.value) {
+
+            case "PLN":
+                return output_currency_rateElement.innerText=PLN.toFixed(2);
+
+            case "EUR":
+                return output_currency_rateElement.innerText=EUR;
+
+            case "GBP":
+                return output_currency_rateElement.innerText=GBP;
+
+            case "USD":
+                return output_currency_rateElement.innerText=USD;
+
+            case "CAD":
+                return output_currency_rateElement.innerText=CAD;
+
+            case "CLP":
+                return output_currency_rateElement.innerText=CLP;
+
+            case "AUD":
+                return output_currency_rateElement.innerText=AUD;
+
+            case "CZK":
+                return output_currency_rateElement.innerText=CZK;
+                
+            case "UAH":
+                return output_currency_rateElement.innerText=UAH;
+
+            case "NZD":
+                return output_currency_rateElement.innerText=NZD;
+            
+            default:
+                return output_currency_rateElement.innerText=CHF;
+        };      
+    });
+    formElement.addEventListener("submit", (e) => {
+        e.preventDefault(); 
+
+        const input_currencyElement = document.querySelector(".form__field--input_currency");
+        const output_currencyElement = document.querySelector(".form__field--output_currency");
+        const valueElement = document.querySelector(".form__field--value");
+        value = valueElement.value;
+        const input_amount = document.querySelector(".input_amount");
+        const input_currency = document.querySelector(".input_currency");
+        const output_amount = document.querySelector(".output_amount");
+        const output_currency = document.querySelector(".output_currency");
+
+        PLN_amount = currency_calculator_first_stage(value, input_currencyElement);
+        amount = currency_calculator_second_stage(PLN_amount,output_currencyElement);
+
+        input_amount.innerText = value;
+        input_currency.innerText=input_currencyElement.value;
+        output_amount.innerText=amount.toFixed(2);
+        output_currency.innerText=output_currencyElement.value;
+    });
 
 
 
 
+}       
