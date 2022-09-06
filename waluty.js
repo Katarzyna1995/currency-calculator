@@ -189,12 +189,12 @@
         const input_currencyElement = document.querySelector(".form__field--input_currency");
         const output_currencyElement = document.querySelector(".form__field--output_currency");
         const valueElement = document.querySelector(".form__field--value");
-        value = valueElement.value;
         const input_amount = document.querySelector(".input_amount");
         const input_currency = document.querySelector(".input_currency");
         const output_amount = document.querySelector(".output_amount");
         const output_currency = document.querySelector(".output_currency");
 
+        value = valueElement.value;
         PLN_amount = currency_calculator_first_stage(value, input_currencyElement);
         amount = currency_calculator_second_stage(PLN_amount,output_currencyElement);
 
@@ -203,8 +203,4 @@
         output_amount.innerText=amount.toFixed(2);
         output_currency.innerText=output_currencyElement.value;
     });
-
-
-
-
 }       
