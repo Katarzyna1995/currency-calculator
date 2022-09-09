@@ -1,13 +1,16 @@
 .background {
     height: 150px;
-    max-width: 100%;
+    max-width: 1000px;
     background-image: url("../images/images.jpg");
     background-repeat: round;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 
 .form__fieldset--background {
-    max-width: 100%;
+    max-width: 1000px;
     background-image: url("../images/1.jpg");
-    background-repeat: no-repeat;
+    background-repeat: round;
 }
