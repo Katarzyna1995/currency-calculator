@@ -146,6 +146,8 @@
 
         const output_currencyElement = document.querySelector(".form__field--output_currency");
         const output_currency_rateElement = document.querySelector(".form__field--output_currency_rate");
+<<<<<<< HEAD
+=======
 
         switch (output_currencyElement.value) {
 
@@ -155,6 +157,65 @@
             case "EUR":
                 return output_currency_rateElement.innerText=EUR;
 
+            case "GBP":
+                return output_currency_rateElement.innerText=GBP;
+
+            case "USD":
+                return output_currency_rateElement.innerText=USD;
+
+            case "CAD":
+                return output_currency_rateElement.innerText=CAD;
+
+            case "CLP":
+                return output_currency_rateElement.innerText=CLP;
+
+            case "AUD":
+                return output_currency_rateElement.innerText=AUD;
+
+            case "CZK":
+                return output_currency_rateElement.innerText=CZK;
+                
+            case "UAH":
+                return output_currency_rateElement.innerText=UAH;
+
+            case "NZD":
+                return output_currency_rateElement.innerText=NZD;
+            
+            default:
+                return output_currency_rateElement.innerText=CHF;
+        };      
+    });
+    formElement.addEventListener("submit", (e) => {
+        e.preventDefault(); 
+
+        const input_currencyElement = document.querySelector(".form__field--input_currency");
+        const output_currencyElement = document.querySelector(".form__field--output_currency");
+        const valueElement = document.querySelector(".form__field--value");
+        value = valueElement.value;
+        const input_amount = document.querySelector(".input_amount");
+        const input_currency = document.querySelector(".input_currency");
+        const output_amount = document.querySelector(".output_amount");
+        const output_currency = document.querySelector(".output_currency");
+
+        PLN_amount = currency_calculator_first_stage(value, input_currencyElement);
+        amount = currency_calculator_second_stage(PLN_amount,output_currencyElement);
+
+        input_amount.innerText = value;
+        input_currency.innerText=input_currencyElement.value;
+        output_amount.innerText=amount.toFixed(2);
+        output_currency.innerText=output_currencyElement.value;
+    });
+>>>>>>> 58f0fb153fbedef1b69611f2a07abee64e5a2fb7
+
+        switch (output_currencyElement.value) {
+
+            case "PLN":
+                return output_currency_rateElement.innerText=PLN.toFixed(2);
+
+            case "EUR":
+                return output_currency_rateElement.innerText=EUR;
+
+<<<<<<< HEAD
             case "GBP":
                 return output_currency_rateElement.innerText=GBP;
 
@@ -203,4 +264,6 @@
         output_amount.innerText=amount.toFixed(2);
         output_currency.innerText=output_currencyElement.value;
     });
+=======
+>>>>>>> 58f0fb153fbedef1b69611f2a07abee64e5a2fb7
 }       
